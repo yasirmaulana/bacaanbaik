@@ -6,7 +6,8 @@ const userSchema = new Schema({
         judul: String,
         penerbit: String,
         penulis: String,
-        deskripsi: String
+        deskripsi: String,
+        imgurl: String
     },
     {timestamps: true}     
 )

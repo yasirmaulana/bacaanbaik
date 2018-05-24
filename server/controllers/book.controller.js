@@ -8,7 +8,7 @@ module.exports = {
         penerbit: req.body.penerbit,
         penulis: req.body.penulis,
         deskripsi: req.body.deskripsi,
-        // url: req.file.cloudStoragePublicUrl
+        imgurl: req.file.cloudStoragePublicUrl
     }
     const newBook = new Book(ObjBook)
     newBook.save()
