@@ -19,5 +19,15 @@ module.exports = {
          })
      })
      .catch( error => console.log(error))
-  }
+  },
+  listBook(req, res){
+    Book.find()
+     .then( books => {
+         res.status(200).json({
+             message: "list book",
+             data: books
+         })
+     })
+     .catch( error => console.log(error))
+    },
 }

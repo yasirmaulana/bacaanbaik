@@ -2,17 +2,17 @@ const express = require('express');
 const router = express.Router();
 const images = require('../helpers/images')
 const {
-  addBook
+  addBook,
+  listBook
 } = require('../controllers/book.controller');
 
 /* GET users listing. */
-router.get('/', function(req, res, next) {
-  res.send('respond with a resource');
-});
+router.get('/list', listBook)
 router.post('/add',
   images.multer.single('image'),
   images.sendUploadToGCS,
   addBook
 )
+
 
 module.exports = router;
